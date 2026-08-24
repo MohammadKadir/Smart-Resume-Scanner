@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Hub* | Intelligent AI Candidate Screener</title>
+    <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Emerald Glow Background Elements -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-hero-right"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <div class="app-wrapper">
+
+        <!-- Top Editorial Header Bar -->
+        <header class="top-header">
+            <div class="header-left">
+                <a href="/" class="brand-logo">
+                    <span class="brand-name">RESUME HUB<span class="brand-asterisk">*</span></span>
+                </a>
+
+                <nav class="header-nav">
+                    <a href="#section-hero" class="nav-link active">Overview</a>
+                    <a href="#section-jobs" class="nav-link">Jobs</a>
+                    <a href="#section-upload" class="nav-link">Upload</a>
+                    <a href="#section-candidates" class="nav-link">Shortlist</a>
+                    <a href="/docs" target="_blank" class="nav-link external-link">API Docs <i class="fa-solid fa-arrow-up-right-from-square nav-sub-icon"></i></a>
+                </nav>
+            </div>
+
+            <div class="header-center">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="global-search" placeholder="Search candidates, skills, or job profiles...">
+                </div>
+            </div>
+
+            <div class="header-right-tools">
+                <div id="header-mode-badge" class="mode-pill demo-mode-pill">
+                    <span class="status-dot"></span>
+                    <span id="header-mode-text">RECRUITER MODE</span>
+                </div>
+
+                <button id="toggle-mode-btn" class="switch-mode-btn" title="Toggle AI / Heuristic Mode">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span id="header-mode-label">Demo Engine</span>
+                </button>
+
+                <button type="button" id="header-upload-btn" class="primary-emerald-btn header-cta">
+                    <i class="fa-solid fa-plus"></i> Upload PDF
+                </button>
+
+                <div class="user-profile-tag">
+                    <div class="avatar-circle">
+                        <span>RA</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Main Body -->
+        <main class="dashboard-body" id="section-hero">
+
+            <!-- Editorial Hero Section -->
+            <section class="editorial-hero">
+                <div class="hero-content-col">
+                    <div class="eyebrow-tag">
+                        <span class="asterisk-bullet">*</span> NEXT-GEN AI TALENT INTELLIGENCE
+                    </div>
+
+                    <h1 class="hero-main-title">
+                        TALENT<br>
+                        MATCH<span class="sup-number">100</span><br>
+                        ACTIVATED
+                    </h1>
+
+                    <p class="hero-description">
+                        Automated resume parsing, high-precision semantic matching, and multi-dimensional scoring engineered for modern recruiting teams.
+                    </p>
+
+                    <!-- Quick Catalogue Action Bar -->
+                    <div class="catalogue-action-box">
+                        <span class="catalogue-label">QUICK EVALUATION SUITE</span>
+                        <div class="catalogue-form-row">
+                            <div class="catalogue-input-wrap">
+                                <select id="hero-quick-job-select" class="catalogue-select">
+                                    <option value="">Select Job Profile Target...</option>
+                                    <option value="java">Senior Java Developer</option>
+                                    <option value="frontend">Frontend React Engineer</option>
+                                    <option value="data">Data Analyst / BI Specialist</option>
+                                </select>
+                            </div>
+                            <button type="button" id="hero-run-action-btn" class="catalogue-submit-btn">
+                                <span>Run AI Match</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual-col">
+                    <div class="visual-card-wrapper">
+                        <!-- Floating Dark Badge -->
+                        <div class="floating-dark-badge">
+                            <span class="badge-text">AI 2.0</span>
+                            <span class="badge-sub">NEW!</span>
+                        </div>
+
+                        <!-- Hero Showcase Card -->
+                        <div class="hero-art-card">
+                            <div class="art-card-header">
+                                <div class="art-pulse-dot"></div>
+                                <span class="art-header-title">Live Candidate Match Engine</span>
+                                <span class="art-header-status">ONLINE</span>
+                            </div>
+
+                            <div class="art-card-metrics">
+                                <div class="art-metric-item">
+                                    <span class="art-metric-val" id="hero-stat-score">9.4</span>
+                                    <span class="art-metric-label">Peak Match Score</span>
+                                </div>
+                                <div class="art-metric-item">
+                                    <span class="art-metric-val" id="hero-stat-resumes">0</span>
+                                    <span class="art-metric-label">Indexed Resumes</span>
+                                </div>
+                            </div>
+
+                            <div class="art-sample-preview">
+                                <div class="preview-cand-row">
+                                    <div class="preview-avatar"><i class="fa-solid fa-user-check"></i></div>
+                                    <div class="preview-cand-info">
+                                        <strong>Top Candidate Stream</strong>
+                                        <small>Automated ranking active</small>
+                                    </div>
+                                    <span class="pill-emerald-sm">SHORTLISTED</span>
+                                </div>
+                                <div class="art-tags-row">
+                                    <span class="art-tag">Java 17</span>
+                                    <span class="art-tag">Spring Boot</span>
+                                    <span class="art-tag">Microservices</span>
+                                    <span class="art-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-art-footer">
+                                <button type="button" id="hero-view-shortlist-btn" class="art-footer-btn">
+                                    <i class="fa-solid fa-list-check"></i> View Ranked Shortlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metrics Highlight Row -->
+            <section class="metrics-cards-row">
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <span class="metric-label">TOTAL RESUMES INDEXED</span>
+                        <h3 id="stat-resumes">0 Resumes</h3>
+                    </div>
+                    <div class="metric-icon-badge emerald-tint">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <span class="metric-label">SHORTLISTED (8.0 - 10.0)</span>
+                        <h3 id="stat-shortlisted">0 Candidates</h3>
+                    </div>
+                    <div class="metric-icon-badge dark-tint">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <span class="metric-label">UNDER REVIEW (6.0 - 7.9)</span>
+                        <h3 id="stat-consider">0 Candidates</h3>
+                    </div>
+                    <div class="metric-icon-badge amber-tint">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <span class="metric-label">AVERAGE MATCH ACCURACY</span>
+                        <h3 id="stat-avg-score">0.0 / 10</h3>
+                    </div>
+                    <div class="metric-icon-badge emerald-tint">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Workspace Grid -->
+            <div class="content-workspace-grid">
+                
+                <!-- Left Section: Recruiter Actions Workspace -->
+                <div class="quick-actions-container">
+                    
+                    <div class="editorial-section-title">
+                        <span class="asterisk-bullet">*</span>
+                        <h3>Recruiter Workspace & Actions</h3>
+                    </div>
+
+                    <div class="action-cards-row">
+                        <!-- Action 1: Job Description -->
+                        <div class="action-card" id="card-action-job">
+                            <div class="action-card-header">
+                                <span class="step-badge">STEP 01</span>
+                                <div class="action-circle-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            </div>
+                            <h4>Job Descriptions</h4>
+                            <p>Configure role criteria</p>
+                        </div>
+
+                        <!-- Action 2: Resume Parser -->
+                        <div class="action-card" id="card-action-resume">
+                            <div class="action-card-header">
+                                <span class="step-badge">STEP 02</span>
+                                <div class="action-circle-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            </div>
+                            <h4>PDF Uploader</h4>
+                            <p>Drag & drop resumes</p>
+                        </div>
+
+                        <!-- Action 3: AI Analysis -->
+                        <div class="action-card active-card-tint" id="card-action-analyze">
+                            <div class="action-card-header">
+                                <span class="step-badge">STEP 03</span>
+                                <div class="action-circle-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            </div>
+                            <h4>AI Candidate Match</h4>
+                            <p>Run scoring engine</p>
+                        </div>
+                    </div>
+
+                    <!-- Step-by-Step Interactive Workflow Card -->
+                    <div class="workspace-card glass-panel" id="section-jobs">
+                        
+                        <!-- Section A: Job Selection & Input -->
+                        <div class="workspace-section">
+                            <div class="section-header-flex">
+                                <div>
+                                    <span class="sub-step-label">PHASE 1</span>
+                                    <h4><span class="asterisk-bullet">*</span> Job Profile & Target Criteria</h4>
+                                </div>
+                                <div class="template-selector-wrap">
+                                    <select id="preset-job-select" class="styled-select-sm">
+                                        <option value="">-- Load Preset Role --</option>
+                                        <option value="java">Senior Java Developer</option>
+                                        <option value="frontend">Frontend React Engineer</option>
+                                        <option value="data">Data Analyst / BI Specialist</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <form id="job-form" class="mt-14">
+                                <div class="form-row-flex">
+                                    <div class="input-field-group flex-2">
+                                        <label for="job-title" class="field-label">Job Title</label>
+                                        <input type="text" id="job-title" placeholder="e.g. Senior Java Developer" required class="styled-input">
+                                    </div>
+                                    <div class="input-field-group flex-1">
+                                        <label for="saved-jobs-select" class="field-label">Saved Roles</label>
+                                        <select id="saved-jobs-select" class="styled-select">
+                                            <option value="">Select saved job...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-field-group mt-12">
+                                    <label for="job-description" class="field-label">Key Requirements & Technical Competencies</label>
+                                    <textarea id="job-description" rows="3" placeholder="Enter key skills, frameworks, responsibilities, and experience requirements..." required class="styled-textarea"></textarea>
+                                </div>
+
+                                <div class="form-footer-flex mt-12">
+                                    <button type="submit" class="primary-emerald-btn">
+                                        <i class="fa-solid fa-floppy-disk"></i> Save & Set Active Role
+                                    </button>
+                                    <span id="active-job-indicator" class="active-indicator hidden">
+                                        <i class="fa-solid fa-circle-check"></i> Active Role Selected
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+
+                        <hr class="section-divider" id="section-upload">
+
+                        <!-- Section B: Upload Resumes PDF -->
+                        <div class="workspace-section">
+                            <div class="section-header-flex">
+                                <div>
+                                    <span class="sub-step-label">PHASE 2</span>
+                                    <h4><span class="asterisk-bullet">*</span> PDF Resume Upload & Parsing</h4>
+                                </div>
+                                <button type="button" id="load-samples-btn" class="outline-pill-btn">
+                                    <i class="fa-solid fa-flask"></i> Load Demo Candidates
+                                </button>
+                            </div>
+
+                            <div id="drop-zone" class="styled-drop-zone mt-12">
+                                <div class="drop-zone-icon-box">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <p class="drop-zone-main">Drag & Drop Resume PDF(s) here</p>
+                                <span class="drop-zone-sub">or <strong class="text-emerald">click to browse from computer</strong></span>
+                                <input type="file" id="resume-file-input" accept=".pdf" multiple class="hidden">
+                                <div id="selected-files-preview" class="file-preview-list hidden"></div>
+                            </div>
+
+                            <button type="button" id="upload-resumes-btn" class="primary-dark-btn btn-block mt-12" disabled>
+                                <i class="fa-solid fa-file-circle-check"></i> Parse & Extract Resumes
+                            </button>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <!-- Section C: Trigger Matching Analysis -->
+                        <div class="workspace-section trigger-highlight-box" id="section-analyze">
+                            <div class="trigger-flex">
+                                <div class="trigger-info">
+                                    <span class="sub-step-label text-emerald">PHASE 3</span>
+                                    <h4><span class="asterisk-bullet">*</span> Candidate Matching & Scoring</h4>
+                                    <p>Execute multi-attribute semantic analysis comparing candidate profiles against the active job description.</p>
+                                </div>
+                                <button type="button" id="run-analysis-btn" class="primary-emerald-btn cta-large">
+                                    <span>Run Match Engine</span>
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Section: Candidate Shortlist List -->
+                <div class="shortlist-container" id="section-candidates">
+                    <div class="shortlist-header-box">
+                        <div class="editorial-section-title">
+                            <span class="asterisk-bullet">*</span>
+                            <h3>Evaluation Results</h3>
+                        </div>
+
+                        <div class="filter-tab-pills">
+                            <button class="pill-tab active" data-filter="all">All (<span id="count-all">0</span>)</button>
+                            <button class="pill-tab pill-strong" data-filter="strong">Shortlisted (<span id="count-strong">0</span>)</button>
+                            <button class="pill-tab pill-consider" data-filter="consider">Review (<span id="count-consider">0</span>)</button>
+                            <button class="pill-tab pill-weak" data-filter="weak">Weak (<span id="count-weak">0</span>)</button>
+                        </div>
+                    </div>
+
+                    <!-- Candidates Container List -->
+                    <div id="candidates-list-container" class="candidates-card-list">
+                        <div id="empty-state" class="empty-placeholder">
+                            <div class="empty-icon-wrap">
+                                <i class="fa-solid fa-users-slash"></i>
+                            </div>
+                            <h4>No Candidates Evaluated Yet</h4>
+                            <p>Upload candidate PDF resumes and trigger matching analysis to generate scores, strengths, and recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Editorial Minimalist Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span>RESUME HUB<span class="brand-asterisk">*</span></span>
+                    <p>High-Precision Semantic Resume Screener & Intelligence Dashboard</p>
+                </div>
+                <div class="footer-meta">
+                    <span>Built with FastAPI &bull; OpenAI & Heuristic Engine</span>
+                    <span>&copy; 2026 All Rights Reserved</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Candidate Detail Luxury Glass Modal -->
+    <div id="candidate-modal" class="modal-backdrop hidden">
+        <div class="glass-modal-card">
+            <button id="close-modal-btn" class="modal-close-btn" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-top-bar">
+                <div class="modal-title-col">
+                    <span class="eyebrow-tag"><span class="asterisk-bullet">*</span> CANDIDATE DOSSIER</span>
+                    <h2 id="modal-candidate-name">Candidate Name</h2>
+                    <div class="modal-meta-pills">
+                        <span id="modal-candidate-email"><i class="fa-solid fa-envelope"></i> email</span>
+                        <span id="modal-candidate-phone"><i class="fa-solid fa-phone"></i> phone</span>
+                        <span id="modal-candidate-file"><i class="fa-solid fa-file-pdf text-emerald"></i> file.pdf</span>
+                    </div>
+                </div>
+                <div class="modal-score-box">
+                    <div class="score-number-wrap">
+                        <span id="modal-score-circle" class="score-display">0.0</span>
+                        <span class="score-out-of">/ 10</span>
+                    </div>
+                    <span id="modal-recommendation-badge" class="score-label-badge">Recommendation</span>
+                </div>
+            </div>
+
+            <div id="modal-mode-banner" class="modal-mode-banner">
+                <i class="fa-solid fa-microchip"></i> Evaluated via <strong id="modal-mode-name">Demo Mode (Heuristic Engine)</strong>
+            </div>
+
+            <div class="modal-grid-2">
+                <div class="modal-panel strengths-panel">
+                    <h4><i class="fa-solid fa-check text-emerald"></i> Key Strengths & Matched Skills</h4>
+                    <div id="modal-strengths-tags" class="tag-flex"></div>
+                </div>
+                <div class="modal-panel missing-panel">
+                    <h4><i class="fa-solid fa-xmark text-red"></i> Skill Gaps & Missing Reqs</h4>
+                    <div id="modal-missing-tags" class="tag-flex"></div>
+                </div>
+            </div>
+
+            <div class="modal-panel justification-panel mt-15">
+                <h4><i class="fa-solid fa-brain text-emerald"></i> AI Match Justification & Analysis</h4>
+                <p id="modal-justification-text">Evaluation summary...</p>
+            </div>
+
+            <div class="modal-panel profile-panel mt-15">
+                <h4><span class="asterisk-bullet">*</span> Extracted Candidate Profile</h4>
+                <div class="mt-10">
+                    <label class="modal-sub-label">Extracted Technical Competencies:</label>
+                    <div id="modal-all-skills" class="tag-flex mt-5"></div>
+                </div>
+                <div class="mt-12">
+                    <label class="modal-sub-label">Education & Qualifications:</label>
+                    <ul id="modal-education-list" class="styled-list"></ul>
+                </div>
+                <div class="mt-12">
+                    <label class="modal-sub-label">Work Experience & Projects:</label>
+                    <div id="modal-experience-timeline" class="experience-list"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer-bar">
+                <button type="button" class="outline-pill-btn" onclick="document.getElementById('candidate-modal').classList.add('hidden')">
+                    Close Dossier
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-wrapper"></div>
+
+    <!-- JavaScript App Client -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
