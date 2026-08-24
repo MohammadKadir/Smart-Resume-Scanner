@@ -33,15 +33,19 @@ author: Mohammad Kadir
   <strong>Automated PDF Parsing &bull; Multi-Attribute Semantic Extraction &bull; LLM & Heuristic Match Scoring &bull; High-Velocity Shortlisting</strong>
 </p>
 
-[Key Features](#-key-features) &bull; [Video Demo](#-interactive-video-demonstration) &bull; [Architecture](#-system-architecture) &bull; [Quickstart](#-quick-start--installation) &bull; [API Docs](#-rest-api-reference) &bull; [LLM Prompts](#-llm-prompt-architecture) &bull; [Roadmap](#-project-roadmap)
+[Key Features](#-key-features) &bull; [Video Demo](#-platform-demonstration) &bull; [Architecture](#-system-architecture) &bull; [Quickstart](#-quick-start--installation) &bull; [API Docs](#-rest-api-reference) &bull; [LLM Prompts](#-llm-prompt-architecture) &bull; [Roadmap](#-project-roadmap)
 
 </div>
 
 ---
 
-## 📽️ Platform Demonstration
+<div align="center">
+
+## 🎬 Platform Demonstration
 
 https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4
+
+</div>
 
 ---
 
