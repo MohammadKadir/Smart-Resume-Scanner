@@ -42,22 +42,15 @@ author: Mohammad Kadir
 ## 📽️ Interactive Video Demonstration
 
 > [!NOTE]
-> ### 🎬 End-to-End System Walkthrough
-> Watch the video demonstration below to see **Smart Resume Screener** in action: uploading multiple PDF resumes, extracting structured candidate profiles, running semantic matching against job requirements, and reviewing instant match scores with detailed justification breakdowns.
+> ### 🎬 Live System Walkthrough
+> High-velocity candidate resume evaluation, structured entity parsing, and semantic matching against job criteria in real-time.
 
 <div align="center">
-
-https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4
-
-<video src="https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4" controls="controls" width="100%" style="max-height: 520px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-  <source src="Demo_Video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<br/>
-
-[![▶️ Click Here to Watch / Download Demo Video](https://img.shields.io/badge/▶%EF%B8%8F%20Play%20Demo%20Video-Demo__Video.mp4-009688?style=for-the-badge&logo=youtube)](https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4)
-
+  <video src="Demo_Video.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" controls="controls" width="100%" style="max-height: 520px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <source src="Demo_Video.mp4" type="video/mp4">
+    <source src="https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
 ![[Demo_Video.mp4]]
