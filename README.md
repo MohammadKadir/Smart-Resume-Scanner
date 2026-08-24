@@ -41,14 +41,23 @@ author: Mohammad Kadir
 
 ## 📽️ Interactive Video Demonstration
 
-> [!abstract] 🎬 End-to-End System Walkthrough
-> Watch the video below to see **Smart Resume Screener** in action: uploading multiple PDF resumes, extracting structured candidate profiles, running semantic matching against job requirements, and reviewing instant match scores with detailed justification breakdowns.
+> [!NOTE]
+> ### 🎬 End-to-End System Walkthrough
+> Watch the video demonstration below to see **Smart Resume Screener** in action: uploading multiple PDF resumes, extracting structured candidate profiles, running semantic matching against job requirements, and reviewing instant match scores with detailed justification breakdowns.
 
 <div align="center">
-  <video src="Demo_Video.mp4" controls width="100%" style="max-height: 520px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    <source src="Demo_Video.mp4" type="video/mp4">
-    Your browser does not support the video tag. <a href="Demo_Video.mp4">Click here to download and view the demo video</a>.
-  </video>
+
+https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4
+
+<video src="https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4" controls="controls" width="100%" style="max-height: 520px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <source src="Demo_Video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<br/>
+
+[![▶️ Click Here to Watch / Download Demo Video](https://img.shields.io/badge/▶%EF%B8%8F%20Play%20Demo%20Video-Demo__Video.mp4-009688?style=for-the-badge&logo=youtube)](https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4)
+
 </div>
 
 ![[Demo_Video.mp4]]
@@ -57,7 +66,8 @@ author: Mohammad Kadir
 
 ## 🚀 Key Features
 
-> [!tip] Dual Operational Engines: AI Mode & Zero-Config Demo Mode
+> [!TIP]
+> **Dual Operational Engines: AI Mode & Zero-Config Demo Mode**
 > - **AI Mode (OpenAI GPT-4o-mini)**: Uses semantic embeddings and advanced reasoning for contextual understanding (e.g., recognizing that `Spring Boot` fulfills `Java backend framework` or `PyTorch` fulfills `Deep Learning experience`).
 > - **Demo Mode (Local Heuristic NLP)**: Runs completely **offline with zero API keys required**. Uses regex tokenizers and rule-based semantic dictionaries to parse resumes and score candidates out-of-the-box.
 
@@ -216,7 +226,8 @@ Copy-Item .env.example .env
 cp .env.example .env
 ```
 
-> [!important] Setting up AI Mode vs. Demo Mode
+> [!IMPORTANT]
+> **Setting up AI Mode vs. Demo Mode**
 > - **To run with OpenAI AI Mode**: Edit `.env` and set `OPENAI_API_KEY=sk-your-openai-key`.
 > - **To run with Local Demo Mode**: Leave `OPENAI_API_KEY=` empty. The app automatically detects this and activates the offline Heuristic NLP matching engine!
 
@@ -255,7 +266,8 @@ Once running, navigate to:
 
 ## 🧠 LLM Prompt Architecture
 
-> [!example] Structured Prompting for Deterministic JSON Parsing
+> [!NOTE]
+> ### Structured Prompting for Deterministic JSON Parsing
 > Smart Resume Screener employs strict JSON Schema constraints in its system prompts to ensure consistent evaluations:
 
 ### 1. Resume Parsing Prompt
@@ -340,18 +352,25 @@ erDiagram
 
 ## ❓ Troubleshooting & FAQs
 
-> [!faq]- What happens if I don't have an OpenAI API Key?
-> The system automatically falls back to the internal **Heuristic NLP Engine**. You can test and run all features (uploading PDFs, extracting skills, calculating match scores, and shortlisting) completely free with zero setup.
+<details>
+<summary><strong>What happens if I don't have an OpenAI API Key?</strong></summary>
+<br/>
+The system automatically falls back to the internal <strong>Heuristic NLP Engine</strong>. You can test and run all features (uploading PDFs, extracting skills, calculating match scores, and shortlisting) completely free with zero setup.
+</details>
 
-> [!faq]- How does the system handle multi-page or scanned PDFs?
-> PyMuPDF (`fitz`) extracts textual streams across all pages while preserving block order. For optimal extraction, ensure uploaded PDFs have selectable text.
+<details>
+<summary><strong>How does the system handle multi-page or scanned PDFs?</strong></summary>
+<br/>
+PyMuPDF (<code>fitz</code>) extracts textual streams across all pages while preserving block order. For optimal extraction, ensure uploaded PDFs have selectable text.
+</details>
 
-> [!faq]- How do I reset or clear the database?
-> Simply run the provided reset script:
-> ```bash
-> python reset_db.py
-> ```
-> This recreates the SQLite schema and clears previously uploaded files.
+<details>
+<summary><strong>How do I reset or clear the database?</strong></summary>
+<br/>
+Simply run the provided reset script:
+<pre><code>python reset_db.py</code></pre>
+This recreates the SQLite schema and clears previously uploaded files.
+</details>
 
 ---
 
