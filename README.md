@@ -43,13 +43,11 @@ author: Mohammad Kadir
 
 ## 🎬 Platform Demonstration
 
-[![Platform Demo](https://img.shields.io/badge/▶️%20Play%20Demo%20Video-Demo__Video.mp4-009688?style=for-the-badge&logo=youtube)](https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4)
+<p align="center">
+  <img src="demo.gif" alt="Smart Resume Screener Live Demo" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</p>
 
-<video controls="controls" width="100%" style="max-height: 520px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-  <source src="Demo_Video.mp4" type="video/mp4">
-  <source src="https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/MohammadKadir/Smart-Resume-Scanner/raw/main/Demo_Video.mp4
 
 </div>
 
